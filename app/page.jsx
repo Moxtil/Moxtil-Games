@@ -26,28 +26,30 @@ const getData = async (typeTag) => {
   return req.json();
 };
 
-const randomTag = ["open-world", "multiplayer", "story", "modern", "war"];
-const randomNum = Math.floor(Math.random() * randomTag.length);
 export default async function Home() {
+  //
+  const randomTag = ["open-world", "multiplayer", "story", "modern", "war"];
+  const randomNum = Math.floor(Math.random() * randomTag.length);
+  const randomNumber2 = Math.floor(Math.random() * Games.length);
+  //
   const res = await getData(randomTag[randomNum]);
   const Games = res.results;
-  const randomNumber2 = Math.floor(Math.random() * Games.length);
   const fristGame = Games[randomNumber2];
   return (
     <div className={styles.mainContainer}>
-      <Suspense fallback={<div className="loader"></div>}>
-        <div className={`${styles.homeImg} ${montserrat.className}`}>
-          <Image
-            src={fristGame?.background_image}
-            width={700}
-            height={700}
-            alt="Games"
-          />
-          <div className={styles.imgDescription}>
-            <h1>{fristGame?.name}</h1>
-          </div>
+      {/* <Suspense fallback={<div className="loader"></div>}> */}
+      <div className={`${styles.homeImg} ${montserrat.className}`}>
+        <Image
+          src={fristGame?.background_image}
+          width={700}
+          height={700}
+          alt="Games"
+        />
+        <div className={styles.imgDescription}>
+          <h1>{fristGame?.name}</h1>
         </div>
-      </Suspense>
+      </div>
+      {/* </Suspense> */}
       <div className={styles.getButton}>
         <Link href={`/Pages/Games/${fristGame.id}`}>Get Now</Link>
       </div>
