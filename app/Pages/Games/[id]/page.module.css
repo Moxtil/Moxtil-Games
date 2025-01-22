@@ -1,0 +1,153 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  margin-block: 20px;
+}
+.rateStar {
+  color: gold;
+  font-size: 22px;
+}
+.publishersHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.publishers {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+  flex-grow: 1;
+}
+.publishers > img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+.mainContainer {
+  padding: 12px;
+}
+@media (max-width: 776px) {
+  .mainContainer {
+    width: 100%;
+    margin-top: 100px;
+  }
+}
+.imgContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+.mainImg {
+  border: 2px solid gold;
+  min-width: 350px;
+  max-width: 1600px;
+  width: 100%;
+  min-height: 400px;
+  max-height: 500px;
+  border-radius: 5px;
+  object-fit: fill;
+  filter: drop-shadow(0 0 10px gold);
+  aspect-ratio: 1/1;
+}
+.moreImg {
+  margin-left: 12px;
+}
+.moreImg img {
+  border: 2px solid #eee;
+  transition: 0.25s ease all;
+}
+.moreImg img:hover {
+  transform: scale(1.03);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 30px;
+}
+.container > p {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+}
+
+.container > .plats {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.container .plats .platsIcons {
+  font-size: 22px;
+}
+.tags {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.tags span {
+  padding: 8px;
+  background: rgb(78, 3, 78);
+  border-radius: 20px;
+  box-shadow: 0 0 10px #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+#secondaryHeader {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  margin-top: 40px;
+}
+
+.similarGames {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-block: 40px;
+}
+.similarGames > a {
+  border: 2px solid #fff;
+  flex-grow: 1;
+  flex-basis: 300px;
+  transition: 0.25s ease all;
+  min-width: 300px;
+  max-width: 500px;
+  min-height: 375px;
+  box-shadow: 0 0 7px #000;
+}
+.similarGames > a:hover {
+  transform: scale(1.04);
+}
+.similarGames > a > img {
+  width: 100%;
+}
+.similarGames > a > div {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.similarGames > a > div > p {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

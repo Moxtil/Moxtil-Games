@@ -1,0 +1,127 @@
+.mainContainer {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  z-index: 190;
+}
+@media (max-width: 776px) {
+  .mainContainer {
+    margin-top: 100px;
+  }
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 209;
+}
+
+.homeIMg {
+  position: relative !important;
+  max-width: 100%;
+  min-height: 350px;
+  padding: 10px;
+}
+.homeIMg img {
+  height: 100%;
+}
+.homeImg .imgDescription {
+  padding: 10px;
+  position: absolute;
+  top: 30px;
+}
+.homeImg .imgDescription > h1 {
+  color: gold;
+  letter-spacing: 1px;
+  font-size: 40px;
+}
+
+.homeImg img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.getButton {
+  position: relative;
+  max-width: 140px;
+  text-align: center;
+  margin-top: 20px;
+  padding: 5px 14px;
+  border: 2px solid white;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  color: #eee;
+  box-shadow: 0 0 10px #eee;
+  transition: 0.25s ease;
+}
+.getButton:hover {
+  transform: translateY(-5px);
+}
+.moreImg {
+  margin-top: 20px;
+  margin-left: 12px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.moreImg img {
+  flex-grow: 1;
+  flex-basis: 200px;
+  border: 2px solid #eee;
+  transition: 0.25s ease all;
+}
+.moreImg img:hover {
+  transform: scale(1.03);
+}
+#header {
+  margin-top: 75px;
+}
+.moreGames {
+  margin-top: 20px;
+  position: relative;
+  max-width: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.moreGames > a {
+  flex-grow: 1;
+  flex-basis: 250px;
+  border: 2px solid rgb(190, 4, 190);
+  height: 430px;
+  overflow: hidden;
+}
+.moreGames > a:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px gold;
+  transition: 0.25s ease-in-out all;
+  border-radius: 10px;
+}
+.moreGames > a > img {
+  width: 100%;
+  object-fit: fill;
+}
+.moreGames > a > .gameRate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.moreGames > a > .gameRate p:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  justify-content: center;
+}
+.moreGames > a > .gameRate p:nth-child(2) #stars {
+  font-size: 20px;
+  color: gold;
+}

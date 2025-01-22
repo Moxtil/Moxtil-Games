@@ -1,0 +1,96 @@
+.navbar {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  width: 250px;
+  padding: 15px;
+  gap: 30px;
+  background-color: hsl(311.05deg 63.33% 11.76%);
+  position: relative;
+  z-index: 200;
+}
+@media (min-width: 777px) {
+  .navbar {
+    min-height: 100vh;
+    min-width: 250px;
+  }
+}
+
+.navbar h1 {
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  position: fixed;
+  text-align: left;
+  width: max-content;
+}
+.navbar h1 > span {
+  color: hsl(317, 68%, 50%);
+}
+.navbar > .navLinks {
+  padding: 10px;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: end; */
+  gap: 30px;
+}
+@media (min-width: 777px) {
+  .navLinks {
+    max-height: 10000px !important;
+  }
+}
+.navbar > .navLinks > a {
+  font-size: 18px;
+  display: flex;
+  width: 175px;
+  max-width: 200px;
+  min-width: 100px;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 20px;
+  transition: 0.25s ease all;
+  border-radius: 20px;
+}
+.navbar > .navLinks > a:hover {
+  background-color: hsl(317, 88%, 34%) !important;
+}
+.menu {
+  font-size: 30px;
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 776px) {
+  .navbar {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .navLinks {
+    transition: 0.25s ease all;
+    padding: 10px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    height: min-content !important;
+    background-color: hsl(311.05deg 63.33% 11.76%);
+    overflow: hidden;
+  }
+  .navLinks > a:nth-child(1) {
+    margin-top: 10px;
+  }
+
+  .menu {
+    display: block;
+  }
+}

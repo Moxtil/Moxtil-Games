@@ -1,0 +1,84 @@
+.mainContainer {
+  padding: 12px;
+  width: 100%;
+}
+@media (max-width: 776px) {
+  .mainContainer {
+    margin-top: 100px;
+  }
+}
+
+.searchSide {
+  position: relative;
+  width: 300px;
+  min-width: 150px;
+  margin-right: 10px;
+  margin-block: 20px;
+}
+.searchSide input {
+  width: 100%;
+  border: 2px solid #eee;
+  padding: 9px;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #eee;
+  outline: none;
+}
+.searchSide input::placeholder {
+  color: rgba(255, 255, 255, 0.653);
+  font-weight: 200;
+}
+.searchSide .searchIcon {
+  position: absolute;
+  right: 15px;
+  top: 7px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+.container > a {
+  flex-grow: 1;
+  flex-basis: 200px;
+  border: 2px solid #eee;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 300px;
+  border-radius: 6px;
+}
+.container > a:hover {
+  transition: 0.25s ease all;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px gold;
+}
+.container > a hr {
+  border-width: 80%;
+  margin: auto;
+}
+.container img {
+  border-left: 3px solid #eee;
+  border-color: #eee;
+}
+.container .userName > p {
+  color: #eee;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 6px;
+}
+.container .userName > span {
+  font-size: 14px;
+  color: #111;
+  font-weight: 500;
+}

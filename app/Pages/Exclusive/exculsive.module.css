@@ -1,0 +1,84 @@
+.header {
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc((100vw) - 250px);
+}
+@media (max-width: 776px) {
+  .header {
+    width: 100%;
+    margin-top: 100px;
+  }
+}
+.header h1 {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1.5px;
+}
+.header a {
+  font-weight: 500;
+  font-size: 17px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 20px;
+}
+.container > div {
+  flex-grow: 1;
+  flex-basis: 300px;
+  transition: 0.25s ease all;
+  max-height: 520px;
+  transition: 0.25s ease all;
+  border-radius: 10px;
+}
+.container > div img:hover {
+  transition: 0.25s ease all;
+  border-radius: 10px;
+  transform: scale(1.02);
+  box-shadow: 0 0 10px gold;
+}
+.container > div a img {
+  width: 100%;
+  border: 2px solid #eee;
+  border-radius: 10px;
+}
+.container > div > p {
+  padding: 5px;
+}
+.sonyExclusive {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.sonyExclusive .sonyGame {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background-color: #222;
+  padding-left: 10px;
+  margin: 7px;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+.sonyExclusive .sonyGame h3 {
+  font-size: 28px;
+}
+.sonyExclusive .sonyGame hr {
+  border-color: #999;
+}
+.sonyExclusive .sonyGame p {
+  font-size: 12px;
+  color: #999;
+}
+.sonyExclusive .sonyGame img {
+  height: 100%;
+}

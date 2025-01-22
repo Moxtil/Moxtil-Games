@@ -1,0 +1,81 @@
+.mainContainer {
+  padding: 20px;
+  width: 100%;
+}
+@media (max-width: 776px) {
+  .mainContainer {
+    margin-top: 100px;
+  }
+}
+.secondContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 12px;
+}
+.searchSide {
+  position: relative;
+  width: 300px;
+  min-width: 150px;
+  margin-right: 10px;
+}
+.searchSide input {
+  width: 100%;
+  border: 2px solid #eee;
+  padding: 9px;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #eee;
+  outline: none;
+}
+.searchSide input::placeholder {
+  color: rgba(255, 255, 255, 0.653);
+  font-weight: 200;
+}
+.searchSide .searchIcon {
+  position: absolute;
+  right: 15px;
+  top: 7px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.mainContainer > h2 {
+  transform: translateX(20px);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.container > a {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  height: 500px;
+  max-width: 275px;
+  overflow: hidden;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  flex-grow: 1;
+  flex-basis: 200px;
+}
+.container > a:hover {
+  transition: 0.25s ease all;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px gold;
+}
+.container .gameCard img {
+  width: 100%;
+  object-fit: fill;
+}
+.gameDets {
+  padding: 6px;
+}
+.gameDets p {
+  font-size: 15px;
+}
