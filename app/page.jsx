@@ -26,12 +26,12 @@ const getData = async (typeTag) => {
   return req.json();
 };
 
-const randomTag = ["open-world", "multiplayer", "story", "modern", "war"];
-const randomNum = Math.floor(Math.random() * randomTag.length);
-const randomNumber2 = Math.floor(Math.random() * Games.length);
 export default async function Home() {
+  const randomTag = ["open-world", "multiplayer", "story", "modern", "war"];
+  const randomNum = Math.floor(Math.random() * randomTag.length);
   const res = await getData(randomTag[randomNum]);
   const Games = res.results;
+  const randomNumber2 = Math.floor(Math.random() * Games.length);
   const fristGame = Games[randomNumber2];
   return (
     <div className={styles.mainContainer}>
