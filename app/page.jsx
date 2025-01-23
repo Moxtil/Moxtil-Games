@@ -32,34 +32,34 @@ export default async function Home() {
   const res = await getData(randomTag[randomNum]);
   const Games = res.results;
   const randomNumber2 = Math.floor(Math.random() * Games.length);
-  const fristGame = Games[randomNumber2];
+  const firstGame = Games[randomNumber2];
   return (
     <div className={styles.mainContainer}>
       <Suspense fallback={<div className="loader"></div>}>
         <div className={`${styles.homeImg} ${montserrat.className}`}>
           <Image
-            src={fristGame?.background_image}
+            src={firstGame?.background_image}
             width={700}
             height={700}
             alt="Games"
           />
           <div className={styles.imgDescription}>
-            <h1>{fristGame?.name}</h1>
+            <h1>{firstGame?.name}</h1>
           </div>
         </div>
       </Suspense>
       <div className={styles.getButton}>
-        <Link href={`/Pages/Games/${fristGame.id}`}>Get Now</Link>
+        <Link href={`/Pages/Games/${firstGame.id}`}>Get Now</Link>
       </div>
       <div className={styles.moreImg}>
-        {fristGame.short_screenshots?.map((sc) => {
+        {firstGame.short_screenshots?.map((sc) => {
           return (
             <Image
+              key={sc.id}
               src={sc.image ? sc.image : "No Image"}
               alt={sc.id}
               width={250}
               height={250}
-              key={sc.id}
             />
           );
         })}

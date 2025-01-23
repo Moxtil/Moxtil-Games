@@ -7,21 +7,26 @@ import { useState, useEffect } from "react";
 import { IoSearch } from "react-icons/io5";
 
 export default function page() {
+  const [fetchUrl, setFetchUrl] = useState("https://dummyjson.com/users");
   const [users, setUsers] = useState({});
   const [inputValue, setInputValue] = useState("");
   const [loader, setLoader] = useState(false);
 
   useEffect(() => {
     setLoader(true);
-    fetch("https://dummyjson.com/users")
+    fetch(fetchUrl)
       .then((response) => response.json())
       .then((data) => setUsers(data))
       .then(() => setLoader(false))
       .catch((error) => console.error("Error fetching data:", error));
-  }, []);
+  }, [fetchUrl]);
 
   const handleChanging = (event) => {
     setInputValue(event.target.value);
+  };
+
+  const fetchUrlChangeHandler = () => {
+    setFetchUrl(`https://dummyjson.com/users/search?q=${inputValue}`);
   };
   return (
     <div className={styles.mainContainer}>
@@ -34,15 +39,9 @@ export default function page() {
           onChange={handleChanging}
         />
         <div>
-          <Link
-            href={
-              inputValue == ""
-                ? `/Pages/Friends`
-                : `/Pages/Friends/Search/${inputValue}`
-            }
-          >
+          <div onClick={fetchUrlChangeHandler}>
             <IoSearch className={styles.searchIcon} />
-          </Link>
+          </div>
         </div>
       </div>
       {loader && <div className="loader"></div>}
