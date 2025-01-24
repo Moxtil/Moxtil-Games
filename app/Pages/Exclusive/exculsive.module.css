@@ -30,7 +30,7 @@
 }
 .container > div {
   flex-grow: 1;
-  flex-basis: 300px;
+  flex-basis: 200px;
   transition: 0.25s ease all;
   max-height: 520px;
   transition: 0.25s ease all;

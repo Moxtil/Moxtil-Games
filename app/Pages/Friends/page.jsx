@@ -46,6 +46,7 @@ export default function page() {
       </div>
       {loader && <div className="loader"></div>}
       <div className={styles.container}>
+        {!users && <div>No Results Found</div>}
         {users &&
           users?.users?.map((us) => {
             return (
