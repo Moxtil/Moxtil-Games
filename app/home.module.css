@@ -96,7 +96,7 @@
   flex-grow: 1;
   flex-basis: 250px;
   border: 2px solid rgb(190, 4, 190);
-  height: 430px;
+  height: 375px;
   overflow: hidden;
 }
 .moreGames > a:hover {

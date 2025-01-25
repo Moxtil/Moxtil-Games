@@ -75,7 +75,7 @@ export default async function Home() {
                 src={g?.background_image}
                 alt={g.name}
                 width={400}
-                height={350}
+                height={300}
               />
               <div className={styles.gameRate}>
                 <p>{g.name}</p>

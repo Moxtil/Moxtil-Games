@@ -95,13 +95,13 @@ export default async function page({ params }) {
           <MdOutlineScreenshotMonitor className={styles.platsIcons} />
           Available On :
           {myGame.parent_platforms.map((m) => {
-            return <span>{m.platform.name}</span>;
+            return <span key={m}>{m.platform.name}</span>;
           })}
         </div>
         <div className={styles.tags}>
           {myGame.tags.map((tag) => {
             return (
-              <span>
+              <span key={tag}>
                 <FaTags />
                 {tag.name}
               </span>

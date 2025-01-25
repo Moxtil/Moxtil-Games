@@ -60,7 +60,7 @@ export default function page() {
                   src={g?.background_image ? g?.background_image : secondImg}
                   alt={g?.name}
                   width={350}
-                  height={400}
+                  height={250}
                 />
               </div>
               <div className={styles.gameDets}>

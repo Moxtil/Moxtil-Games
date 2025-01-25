@@ -32,8 +32,8 @@ export default async function Exculsive() {
                 <Image
                   src={g?.background_image}
                   alt={g.name}
-                  height={475}
-                  width={300}
+                  height={300}
+                  width={325}
                 />
                 <p>{g?.name}</p>
               </Link>

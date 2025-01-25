@@ -46,9 +46,11 @@
   width: 100%;
   border: 2px solid #eee;
   border-radius: 10px;
+  object-fit: fill;
 }
-.container > div > p {
+.container > div p {
   padding: 5px;
+  font-size: 14px;
 }
 .sonyExclusive {
   padding: 10px;
