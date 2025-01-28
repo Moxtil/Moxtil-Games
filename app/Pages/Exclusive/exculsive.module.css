@@ -51,6 +51,8 @@
 .container > div p {
   padding: 5px;
   font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .sonyExclusive {
   padding: 10px;
