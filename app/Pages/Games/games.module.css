@@ -14,6 +14,11 @@
   flex-direction: row-reverse;
   gap: 12px;
 }
+@media (max-width: 776px) {
+  .secondContainer {
+    flex-direction: column-reverse;
+  }
+}
 .searchSide {
   position: relative;
   width: 300px;
